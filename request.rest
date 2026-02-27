@@ -1,0 +1,57 @@
+### User API Testing
+
+### Posts
+
+### Get all posts
+GET http://localhost:3000/posts
+
+### Get post by id
+GET http://localhost:3000/posts/12345
+
+### Create post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "image": "shoval.king",
+    "text": "This is the content of my first post",
+    "sender": "Bob Sponge"
+}
+
+### Update post
+PUT http://localhost:3000/posts/697a65f59de97b4c60af618d
+Content-Type: application/json
+
+{
+    "text": "My updated post"
+}
+
+
+### Comments
+
+### Get all comments
+GET http://localhost:3000/comment
+
+### Get comment by id
+GET http://localhost:3000/comment/697a73c03ef605dc07f5bee5
+
+### Create comment
+POST http://localhost:3000/comment
+Content-Type: application/json
+
+{
+    "postId": "697a65f59de97b4c60af618d",
+    "content": "This is a comment",
+    "sender": "Jane Doe"
+}
+
+### Update comment
+PUT http://localhost:3000/comment/697a73c03ef605dc07f5bee5
+Content-Type: application/json
+
+{
+    "content": "Thiasdfs is an updated asdfsadfs afdsa fcomment"
+}
+
+### Delete comment
+DELETE http://localhost:3000/comment/697a73c03ef605dc07f5bee5
